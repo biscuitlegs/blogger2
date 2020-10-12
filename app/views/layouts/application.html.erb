@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogger2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if flash[:success] || flash[:error] %>
+      <p class="flash">
+      <%= flash[:success] %>
+      <%= flash[:error] %>
+      </p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
