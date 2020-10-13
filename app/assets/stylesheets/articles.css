@@ -43,7 +43,7 @@ nav ul li a:active {
     font-size: 2em;
 }
 
-.article-link a {
+.table-link a {
     font-size: 1.7em;
     text-align: center;
     text-decoration: none;
@@ -52,11 +52,11 @@ nav ul li a:active {
 
 }
 
-.article-link a:hover {
+.table-link a:hover {
     color: #8087c2;
 }
 
-.article-link a:active {
+.table-link a:active {
     color: #3d405b;
     font-weight: bold;
 }
@@ -92,7 +92,7 @@ nav ul li a:active {
     display: block;
     border-radius: 10px;
     position: absolute;
-    right: 0.5em;
+    right: 2em;
     top: 4em;
 }
 
@@ -124,6 +124,21 @@ nav ul li a:active {
     padding: 50px;
 }
 
+.icon-tabler-logout {
+    display: block;
+    float: right;
+    margin: 5px 10px 0 0;
+}
+
+.account-link {
+    float: right;
+}
+
+.icon-tabler-login {
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
 .title {
     font-size: 1.5em;
     text-align: center;
@@ -150,14 +165,14 @@ nav ul li a:active {
     width: 60%;
 }
 
-.article-delete-link a {
+.delete-resource-link a {
     padding-top: 10px;
     height: 70px;
     width: 70px;
     display: block;
 }
 
-.article-delete-link {
+.delete-resource-link {
     text-align: center;
     background-color: #E07A5F;
     border-radius: 10px;
@@ -168,16 +183,16 @@ nav ul li a:active {
     margin: 2%
 }
 
-.article-delete-link:hover {
+.delete-resource-link:hover {
     background-color: #ff8d6d;
     color: #f0a73a;
 }
 
-.article-delete-link:active {
+.delete-resource-link:active {
     font-weight: bold;
 }
 
-.article-edit-link {
+.edit-resource-link {
     text-align: center;
     background-color: #3D405B;
     border-radius: 10px;
@@ -188,18 +203,18 @@ nav ul li a:active {
     margin: 2%;
 }
 
-.article-edit-link a {
+.edit-resource-link a {
     width: 70px;
     height: 70px;
     padding-top: 10px;
     display: block;
 }
 
-.article-edit-link:hover {
+.edit-resource-link:hover {
     background-color: #5a5e85;
 }
 
-.article-edit-link:active {
+.edit-resource-link:active {
     font-weight: bold;
 }
 
@@ -247,9 +262,11 @@ nav ul li a:active {
 
 .form-field input::placeholder {
     color: #5b5f88;
+    opacity: 60%;
 }
  .form-field textarea::placeholder {
     color: #5b5f88;
+    opacity: 60%;
  }
 
 .form-field input:focus{
@@ -325,13 +342,69 @@ nav ul li a:active {
     text-align: center;
 }
 
+.login-link {
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    color: green;
+}
+
+.login-link a{
+    color: #81B29A;
+}
+
+.login-link a:hover{
+    color: #a9e7c9;
+}
+
+.login-link a:active{
+    font-weight: bold;
+}
+
+.logout-link {
+    display: block;
+    float: right;
+    font-size: 1.5em;
+}
+
+.logout-link a{
+    color: #E07A5F;
+}
+
+.logout-link a:hover{
+    color: #ff9a7e;
+}
+
+.logout-link a:active{
+    font-weight: bold;
+}
+
+.property-title {
+    padding: 20px 0 0 0;
+    display: block;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    color: #3D405B;
+    font-weight: bold;
+}
+
+.property-body {
+    padding: 10px 0 30px 0;
+    display: block;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    color: #3D405B;
+}
+
 @media only screen and (max-width: 1200px) {
     #articles-table th{
         font-size: 2em;
         padding: 0.5em;
     }
 
-    .article-link a {
+    .table-link a {
         font-size: 1.7em;
     }
 }
@@ -342,7 +415,7 @@ nav ul li a:active {
         padding: 0.5em;
     }
 
-    .article-link a {
+    .table-link a {
         font-size: 1.5em;
     }
 }
@@ -353,7 +426,7 @@ nav ul li a:active {
         padding: 0.5em;
     }
 
-    .article-link a {
+    .table-link a {
         font-size: 1.3em;
     }
 
@@ -376,7 +449,7 @@ nav ul li a:active {
         padding: 0.5em;
     }
 
-    .article-link a {
+    .table-link a {
         font-size: 1em;
     }
 
@@ -402,7 +475,7 @@ nav ul li a:active {
         margin: 1em auto 1em auto;
     }
 
-    .article-link a {
+    .table-link a {
         font-size: 2em;
     }
 

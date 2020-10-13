@@ -1,8 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="title">
+  <h1>All Authors</h1>
+</div>
 
-<h1>Authors</h1>
 
-<table>
+<table id=articles-table>
   <thead>
     <tr>
       <th>Username</th>
@@ -14,16 +15,11 @@
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td><%= author.username %></td>
-        <td><%= author.email %></td>
-        <td><%= link_to 'Show', author %></td>
-        <td><%= link_to 'Edit', edit_author_path(author) %></td>
-        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="table-link"><%= link_to author.username, author %></td>
+        <td class="table-link"><%= link_to author.email, author %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Author', new_author_path %>

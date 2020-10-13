@@ -1,8 +1,8 @@
 class AuthorsController < ApplicationController
   include AuthorsHelper
   before_action :set_author, only: [:show, :edit, :update, :destroy]
-  before_action :zero_authors_or_authenticated, only: [:new, :create]
-  before_action :require_login, except: [:new, :create]
+  #before_action :zero_authors_or_authenticated, only: [:new, :create]
+  before_action :require_login, except: [:new, :create, :index, :show]
 
   # GET /authors
   # GET /authors.json
@@ -31,7 +31,9 @@ class AuthorsController < ApplicationController
 
     respond_to do |format|
       if @author.save
-        format.html { redirect_to @author, notice: 'Author was successfully created.' }
+        auto_login(@author)
+        format.html { redirect_to @author }
+        flash[:success] = "Author #{@author.username} successfully created."
         format.json { render :show, status: :created, location: @author }
       else
         format.html { render :new }

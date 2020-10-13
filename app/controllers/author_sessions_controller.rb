@@ -4,7 +4,8 @@ class AuthorSessionsController < ApplicationController
   
     def create
       if login(params[:email], params[:password])
-        redirect_back_or_to(articles_path, notice: 'Logged in successfully.')
+        redirect_to(articles_path)
+        flash[:success] = "Successfully logged in as #{current_user.username}."
       else
         flash.now.alert = "Login failed."
         render action: :new
@@ -13,6 +14,7 @@ class AuthorSessionsController < ApplicationController
   
     def destroy
       logout
-      redirect_to(:authors, notice: 'Logged out!')
+      redirect_to articles_path
+      flash[:success] = "Successfully logged out."
     end
 end

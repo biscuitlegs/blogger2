@@ -11,27 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_area :username %>
+  <div class="form-field">
+    <%= form.text_field :username, placeholder: "Username..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_area :email %>
+  <div class="form-field">
+    <%= form.text_field :email, placeholder: "Email..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="form-field">
+    <%= form.password_field :password, placeholder: "Password..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+  <div class="form-field">
+    <%= form.password_field :password_confirmation, placeholder: "Confirm Password..." %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-button">
+    <% if params[:action] == "edit" %>
+      <%= form.submit "Update Details"%>
+    <% else %>
+      <%= form.submit "Create Author"%>
+    <% end %>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F2CC8F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+        <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+            </svg>
   </div>
 <% end %>

@@ -23,14 +23,14 @@
             <th>Title</th>
             <th>Author</th>
             <th>Tags</th>
-            <th>Last Updated At</th>
+            <th>Last Updated</th>
         </tr>
     </thead>
     <tbody>
         <% @articles.each do |article| %>
         <tr>
-            <td class="article-link"><%= link_to article.title, article %></td>
-            <td class="article-author">
+            <td class="table-link"><%= link_to article.title, article %></td>
+            <td class="table-link">
             <% author = Author.find(article.author_id) %>
             <%= link_to author.username, author %></td>
             <td class="article-tags">tag1, tag2</td>

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root to: "articles#index"
   resources :articles
   resources :authors
+
+
   resources :author_sessions, only: [ :new, :create, :destroy ]
 
   get 'login'  => 'author_sessions#new'
