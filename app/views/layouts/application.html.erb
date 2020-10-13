@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="navbar-link"><%= link_to "All Articles", articles_path %></li>
+        </ul>
+      </nav>
+    </header>
     <% if flash[:success] || flash[:error] %>
       <p class="flash">
       <%= flash[:success] %>
