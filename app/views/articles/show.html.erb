@@ -7,7 +7,7 @@
     </a>
 </div>
 
-<% if logged_in? %>
+<% if logged_in? && current_user && current_user.id == @article.author_id %>
     <div class="article-delete-link">
         <a href="<%= article_path %>" data-method="delete" data-confirm="Really delete this Article?">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
