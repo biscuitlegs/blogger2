@@ -40,3 +40,12 @@
 <div class="body">
     <h4><%= @article.body %></h4>
 </div>
+
+<div class="title">
+    <h2>Comments</h2>
+</div>
+<%= render partial: "articles/comment", collection: @article.comments %>
+
+<% if logged_in? %>
+    <%= render partial: "comments/form" %>
+<% end %>
