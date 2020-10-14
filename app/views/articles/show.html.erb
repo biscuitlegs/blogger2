@@ -42,6 +42,12 @@
 </div>
 
 <div class="title">
+    <h3>Tags</h3>
+</div>
+
+<%= render partial: "tag", collection: @article.tags %>
+
+<div class="title">
     <h2>Comments (<%= @article.comments.length %>)</h2>
 </div>
 

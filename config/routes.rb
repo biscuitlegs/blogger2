@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   
   resources :authors
+  resources :tags
 
 
   resources :author_sessions, only: [ :new, :create, :destroy ]
