@@ -1,1 +1,5 @@
-<%= link_to tag.name, tag %>
+<% if tag.id == article.tags.last.id %>
+    <%= link_to tag.name, tag %>
+<% else%>
+    <%= link_to tag.name, tag %>, 
+<% end %>
