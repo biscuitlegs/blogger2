@@ -32,26 +32,55 @@
     </div>
 <% end %>
 
-<div class="title">
-  <% if logged_in? && current_user.id == @author.id %>
-    <h1>My Details</h1>
-  <% else %>
-    <h1>Details</h1>
-  <% end %>
-</div>
+<div class="author">
+  <div class="title">
+    <% if logged_in? && current_user.id == @author.id %>
+      <h1>My Details</h1>
+    <% else %>
+      <h1>Details</h1>
+    <% end %>
+  </div>
 
-
-<div class="container">
-  <div class="property-title">Username:</div>
-  <div class="property-body">
+  <h3 class="subtitle">Username:</h3>
+  <div class="body">
     <p><%= @author.username %></p>
   </div>
-</div>
 
-
-<div class="container">
-  <div class="property-title">Email:</div>
-  <div class="property-body">
+  <h3 class="subtitle">Email:</h3>
+  <div class="body">
     <%= @author.email %>
   </div>
+
+  <div class="title">
+    <% if logged_in? && current_user.id == @author.id %>
+      <h1>My Articles</h1>
+    <% else %>
+      <h1>Articles by <%= @author.username %></h1>
+    <% end %>
+  </div>
+
+  <table id="articles-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @author.articles.each do |article| %>
+        <tr>
+            <td class="table-link"><%= link_to article.title, article %></td>
+            <td class="article-tags">
+                <% if article.tags.length > 2 %>
+                    <%= render partial: "articles/tag", collection: article.tags.first(2), :locals => { article: article } %>
+                    and <%= article.tags.length - 2 %> more.
+                <% else %>
+                    <%= render partial: "articles/tag", collection: article.tags, :locals => { article: article } %>
+                <% end %>
+            </td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
 </div>
