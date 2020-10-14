@@ -42,10 +42,19 @@
 </div>
 
 <div class="title">
-    <h2>Comments</h2>
+    <h2>Comments (<%= @article.comments.length %>)</h2>
 </div>
-<%= render partial: "articles/comment", collection: @article.comments %>
+
+<% if @article.comments.length > 0 %>
+    <%= render partial: "articles/comment", collection: @article.comments %>
+<% else %>
+    <div class="info">
+        <%= "No comments yet." %>
+    </div>
+<% end %>
 
 <% if logged_in? %>
-    <%= render partial: "comments/form" %>
+    <div class="embedded-form">
+        <%= render partial: "comments/form" %>
+    </div>
 <% end %>

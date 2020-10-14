@@ -336,10 +336,12 @@ nav ul li a:active {
     width: 70%;
     height: 50px;
     background-color: #81B29A;
-    opacity: 80%;
+    opacity: 70%;
     border: 2px solid #577265;
     border-radius: 10px;
     text-align: center;
+    padding: 15px 0 0 0;
+    font-size: 1.5em;
 }
 
 .login-link {
@@ -395,6 +397,17 @@ nav ul li a:active {
     font-size: 2em;
     margin: 0 auto;
     text-align: center;
+    color: #3D405B;
+}
+
+.embedded-form {
+    margin: 100px;
+}
+
+.info {
+    font-size: 1em;
+    text-align: center;
+    margin: 20px;
     color: #3D405B;
 }
 

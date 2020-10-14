@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
     def update
         @article = Article.find(params[:id])
         @article.update(article_params)
+        flash[:success] = "Article '#{@article.title}' successfully updated."
 
         redirect_to @article
     end
