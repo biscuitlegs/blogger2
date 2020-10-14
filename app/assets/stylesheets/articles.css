@@ -420,6 +420,15 @@ nav ul li a:active {
     color: #3D405B;
 }
 
+.info a {
+    font-size: 1em;
+    color: #3D405B;
+}
+
+.info a:hover {
+    color: #939ad6;
+}
+
 .tag-link {
     margin: 0 auto;
     text-align: center;

@@ -42,7 +42,12 @@
 </div>
 
 <div class="info">
-    <h3>Posted By: <%= Author.find(@article.author_id).username %></h3>
+    <% if current_user.id == @article.author_id %>
+        <h3>Posted By: <%= link_to "Me", current_user %></h3>
+    <% else %>
+        <% author = Author.find(@article.author_id) %>
+        <h3>Posted By: <%= link_to author.username, author %></h3>
+    <% end %>
 </div>
 
 <div class="subtitle">
