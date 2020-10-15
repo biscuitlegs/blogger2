@@ -38,7 +38,7 @@
             <td class="table-link"><%= link_to article.title, article %></td>
             <td class="table-link">
                 <% author = Author.find(article.author_id) %>
-                <% if current_user.id == author.id %>
+                <% if logged_in? && current_user.id == author.id %>
                     <%= link_to "Me", author %>
                 <% else%>
                     <%= link_to author.username, author %>

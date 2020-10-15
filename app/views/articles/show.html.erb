@@ -37,12 +37,18 @@
     <h1><%= @article.title %></h1>
 </div>
 
+<div class="article-image">
+    <% if @article.image.exists? %>
+        <%= image_tag(@article.image.url(:large)) %>
+    <% end %>
+</div>
+
 <div class="body">
     <h4><%= @article.body %></h4>
 </div>
 
 <div class="info">
-    <% if current_user.id == @article.author_id %>
+    <% if logged_in? && current_user.id == @article.author_id %>
         <h3>Posted By: <%= link_to "Me", current_user %></h3>
     <% else %>
         <% author = Author.find(@article.author_id) %>
