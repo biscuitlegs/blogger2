@@ -16,7 +16,7 @@
 
     <% if @article.image.exists? %>
         <div class="article-image">
-            <%= image_tag @article.image.url(:large) %>
+            <%= image_tag @article.image.url(:standard) %>
         </div>
         <div class="label">
             <%= f.label :image, "Attach a New Image" %>

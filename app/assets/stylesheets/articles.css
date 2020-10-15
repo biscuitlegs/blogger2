@@ -265,7 +265,6 @@ nav ul li a:active {
 
 .form-field textarea{
     border-radius: 10px;
-    width: 500px;
     height: 300px;
     margin: 0 auto;
     display: block;
@@ -275,6 +274,9 @@ nav ul li a:active {
     padding: 5px;
     text-align: center;
     font-size: 1.5em;
+    min-width: 50px;
+    max-width: 80%;
+    width: 500px;
 }
 
 .form-field textarea:focus{
@@ -610,7 +612,10 @@ nav ul li a:active {
         margin: 0;
         height: 10px
     }
-    
+
+    .article-image img {
+        width: 480px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
