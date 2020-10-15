@@ -14,14 +14,72 @@
     <header>
       <nav>
         <ul>
-          <li class="navbar-link"><%= link_to "All Articles", articles_path %></li>
-          <li class="navbar-link"><%= link_to "All Authors", authors_path %></li>
-          <li class="navbar-link"><%= link_to "All Tags", tags_path %></li>
+          <li class="navbar-link all-articles-link"><%= link_to "All Articles", articles_path %></li>
+          <li class="mobile-articles-link">
+            <a href="<%= articles_path %>">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F2CC8F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+              <line x1="8" y1="8" x2="12" y2="8" />
+              <line x1="8" y1="12" x2="12" y2="12" />
+              <line x1="8" y1="16" x2="12" y2="16" />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-link all-authors-link"><%= link_to "All Authors", authors_path %></li>
+          <li class="mobile-authors-link">
+            <a href="<%= authors_path %>">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F2CC8F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="9" cy="7" r="4" />
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-link all-tags-link"><%= link_to "All Tags", tags_path %></li>
+          <li class="mobile-tags-link">
+            <a href="<%= tags_path %>">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F2CC8F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M11 3l9 9a1.5 1.5 0 0 1 0 2l-6 6a1.5 1.5 0 0 1 -2 0l-9 -9v-4a4 4 0 0 1 4 -4h4" />
+              <circle cx="9" cy="9" r="2" />
+              </svg>
+            </a>
+          </li>
           <% if logged_in? %>
             <li class="logout-link"><%= link_to "Logout", logout_path %></li>
+            <li class="mobile-logout-link">
+              <a href="<%= logout_path %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E07A5F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                </svg>
+              </a>
+            </li>
             <li class="navbar-link account-link"><%= link_to "My Account", current_user %></li>
+            <li class="mobile-account-link">
+              <a href="<%= author_path(current_user) %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F2CC8F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="7" r="4" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+              </a>
+            </li>
           <% else %>
             <li class="login-link"><%= link_to "Login", login_path %></li>
+            <li class="mobile-login-link">
+              <a href="<%= login_path %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#81B29A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+                </svg>
+              </a>
+            </li>
             <li class="navbar-link account-link"><%= link_to "Create Account", new_author_path %></li>
           <% end %>
         </ul>
