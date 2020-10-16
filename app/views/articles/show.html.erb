@@ -24,7 +24,7 @@
 
 <div class="article-image">
     <% if @article.image.exists? %>
-        <%= image_tag(@article.image.url(:large)) %>
+        <%= image_tag(@article.image.url(:standard)) %>
     <% end %>
 </div>
 
