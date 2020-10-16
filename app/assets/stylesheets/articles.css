@@ -305,11 +305,6 @@ nav ul li a:active {
     cursor: pointer;
 }
 
-.icon-tabler-pencil {
-    float: right;
-    padding: 10px 10px 0 0;
-}
-
 .navbar-link {
     font-size: 1.5em;
 }
@@ -320,6 +315,12 @@ nav ul li a:active {
     height: 70px;
     margin: 30px auto 30px auto;
     border-radius: 10px;
+}
+
+.submit-button svg {
+    stroke: #F2CC8F;
+    float: right;
+    padding: 10px 10px 0 5px;
 }
 
 .flash {

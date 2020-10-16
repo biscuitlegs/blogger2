@@ -22,6 +22,9 @@ gem 'sorcery'
 #Use Paperclip for Images
 gem 'paperclip'
 
+#Use Inline SVG for rendering SVG
+gem 'inline_svg', '~> 1.7', '>= 1.7.1'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
