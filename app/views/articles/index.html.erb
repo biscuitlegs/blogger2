@@ -1,13 +1,13 @@
 <div class="back-link">
     <a href="javascript:history.back()">
-        <%= inline_svg_tag "arrow_back" %>
+        <%= inline_svg_tag "arrow_back.svg" %>
     </a>
 </div>
 
 <% if logged_in? %>
     <div class="new-resource-link">
         <a href="<%= new_article_path %>">
-            <%= inline_svg_tag "file_plus" %>
+            <%= inline_svg_tag "file_plus.svg" %>
         </a>
     </div>
 <% end %>

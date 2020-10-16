@@ -1,18 +1,18 @@
 <div class="back-link">
     <a href="javascript:history.back()">
-        <%= inline_svg_tag "arrow_back" %>
+        <%= inline_svg_tag "arrow_back.svg" %>
     </a>
 </div>
 
 <% if logged_in? && current_user.id == @author.id %>
   <div class="delete-resource-link">
     <a href="<%= @author %>" data-method="delete" data-confirm="Really delete your Author?">
-        <%= inline_svg_tag "trash_large" %>
+        <%= inline_svg_tag "trash_large.svg" %>
     </a>
   </div>
   <div class="edit-resource-link">
     <a href="<%= edit_author_path %>">
-        <%= inline_svg_tag "edit" %>
+        <%= inline_svg_tag "edit.svg" %>
     </a>
   </div>
 <% end %>

@@ -28,34 +28,34 @@
           <!-- Mobile Links -->
           <li class="mobile-articles-link">
             <a href="<%= articles_path %>">
-              <%= inline_svg_tag "news" %>
+              <%= inline_svg_tag "news.svg" %>
             </a>
           </li>
           <li class="mobile-authors-link">
             <a href="<%= authors_path %>">
-              <%= inline_svg_tag "users" %>
+              <%= inline_svg_tag "users.svg" %>
             </a>
           </li>
           <li class="mobile-tags-link">
             <a href="<%= tags_path %>">
-            <%= inline_svg_tag "tag" %>
+            <%= inline_svg_tag "tag.svg" %>
             </a>
           </li>
           <% if logged_in? %>
             <li class="mobile-logout-link">
                 <a href="<%= logout_path %>">
-                  <%= inline_svg_tag "logout" %>
+                  <%= inline_svg_tag "logout.svg" %>
                 </a>
             </li>
             <li class="mobile-account-link">
               <a href="<%= author_path(current_user) %>">
-                <%= inline_svg_tag "user" %>
+                <%= inline_svg_tag "user.svg" %>
               </a>
             </li>
           <% else %>
             <li class="mobile-login-link">
               <a href="<%= login_path %>">
-                <%= inline_svg_tag "login" %>
+                <%= inline_svg_tag "login.svg" %>
               </a>
             </li>
           <% end %>
