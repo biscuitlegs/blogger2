@@ -21,8 +21,8 @@
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td class="table-link"><%= link_to author.username, author %></td>
-        <td class="table-link"><%= link_to author.email, author %></td>
+        <td class="small-resource-link"><%= link_to author.username, author %></td>
+        <td class="small-resource-link"><%= link_to author.email, author %></td>
       </tr>
     <% end %>
   </tbody>

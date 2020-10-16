@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f1de;
+}
+
+.flash {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 70%;
+    height: 80px;
+    background-color: #81B29A;
+    opacity: 70%;
+    border: 2px solid #577265;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0 0 0;
+    font-size: 1.5em;
+}
+
+.article-image img{
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border: 3px solid #F2CC8F;
+}
+
+.article-image img {
+    width: 480px;
+}
+
+.new-resource-link {
+    width: 70px;
+    height: 70px;
+    background-color: #81B29A;
+    display: block;
+    border-radius: 10px;
+    float: right;
+    margin: 2%;
+}
+
+.new-resource-link a {
+    width: 70px;
+    height: 70px;
+    display: block;
+    padding: 10px 0 0 12px;
+}
+
+.new-resource-link:hover {
+    background-color: #a9e9ca;
+    cursor: pointer;
+}
+
+.new-resource-link a:active {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-resource-link a {
+    padding-top: 10px;
+    height: 70px;
+    width: 70px;
+    display: block;
+}
+
+.delete-resource-link {
+    text-align: center;
+    background-color: #E07A5F;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    display: block;
+    float: right;
+    margin: 2%
+}
+
+.delete-resource-link:hover {
+    background-color: #ff8d6d;
+    color: #f0a73a;
+}
+
+.delete-resource-link:active {
+    font-weight: bold;
+}
+
+.edit-resource-link {
+    text-align: center;
+    background-color: #3D405B;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    display: block;
+    float: right;
+    margin: 2%;
+}
+
+.edit-resource-link a {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    display: block;
+}
+
+.edit-resource-link:hover {
+    background-color: #5a5e85;
+}
+
+.edit-resource-link:active {
+    font-weight: bold;
+}
+
+.back-link {
+    text-align: center;
+    background-color: #3D405B;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin: 2%;
+    float: left;
+    display: block;
+}
+
+.back-link a {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    display: block;
+}
+
+.back-link:hover {
+    background-color: #5a5e85;
+}
+
+.back-link:active {
+    font-weight: bold;
+}
+
+.body {
+    font-size: 1em;
+    display: block;
+    margin: 5% auto 2% auto;
+    color:#5b5f88;
+    width: 60%;
+}
+
+.info {
+    font-size: 1em;
+    text-align: center;
+    margin: 20px auto 30px auto;
+    color: #3D405B;
+}
+
+.info a {
+    color: #3D405B;
+}
+
+.info a:hover {
+    color: #939ad6;
+}
+
+.title {
+    font-size: 1.5em;
+    text-align: center;
+    color:#3D405B;
+    display: inline-block;
+    margin: 60px auto 30px auto;
+    width: 100%;
+}
+
+.title span {
+    color: #888ec7;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    text-align: center;
+    color:#3D405B;
+    display: inline-block;
+    margin: 10px auto 5px auto;
+    width: 100%;
+}
+
+#articles-table {
+    margin: 0 auto;
+}
+
+#articles-table th {
+    font-size: 2em;
+    padding: 0.2em;
+    color:#3D405B;
+}
+
+.large-resource-link {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+.large-resource-link a {
+    color: #3D405B;
+    font-size: 1.7em;
+}
+
+.large-resource-link a:hover {
+    color: #888ec7;
+}
+
+.large-resource-link a:active {
+    font-weight: bold;
+}
+
+.small-resource-link {
+    font-size: 1.7em;
+    text-align: center;
+    color: #3d405b;
+    padding: 0.1em 0.2em;
+}
+
+.small-resource-link a {
+    color: #3D405B;
+}
+
+.small-resource-link a:hover {
+    color: #8f96d4;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #articles-table th {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #articles-table th {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #articles-table th {
+        font-size: 1.7em;
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #articles-table th {
+        display: none;
+    }
+
+    #articles-table {
+        margin: 1em auto 1em auto;
+    }
+
+    .no-mobile-link {
+        display: none;
+    }
+
+    .no-mobile-link {
+        display: none;
+    }
+}

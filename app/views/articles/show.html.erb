@@ -45,7 +45,7 @@
     <h3>Tags</h3>
 </div>
 
-<div class="tag-link">
+<div class="small-resource-link">
     <% if @article.tags.empty? %>
         <p class="info">This article has no tags.</p>
     <% else %>
@@ -53,8 +53,8 @@
     <% end %>
 </div>
 
-<div class="title">
-    <h2>Comments (<%= @article.comments.length %>)</h2>
+<div class="subtitle">
+    <h3>Comments (<%= @article.comments.length %>)</h3>
 </div>
 
 <% if @article.comments.length > 0 %>

@@ -18,11 +18,11 @@
         <div class="article-image">
             <%= image_tag @article.image.url(:standard) %>
         </div>
-        <div class="label">
+        <div class="image-upload-label">
             <%= f.label :image, "Attach a New Image" %>
         </div>
     <% else %>
-        <div class="label">
+        <div class="image-upload-label">
             <%= f.label :image, "Attach Image" %>
         </div>
     <% end %>

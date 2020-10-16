@@ -5,7 +5,7 @@
 </div>
 
 <% if logged_in? %>
-    <div id="create-article-link">
+    <div class="new-resource-link">
         <a href="<%= new_article_path %>">
             <%= inline_svg_tag "file_plus" %>
         </a>
@@ -26,8 +26,8 @@
     <tbody>
         <% @articles.each do |article| %>
         <tr>
-            <td class="table-link"><%= link_to article.title, article %></td>
-            <td class="table-link article-author">
+            <td class="small-resource-link"><%= link_to article.title, article %></td>
+            <td class="small-resource-link no-mobile-link">
                 <% author = Author.find(article.author_id) %>
                 <% if logged_in? && current_user.id == author.id %>
                     <%= link_to "Me", author %>
@@ -35,7 +35,7 @@
                     <%= link_to author.username, author %>
                 <% end %>
             </td>
-            <td class="article-tags">
+            <td class="small-resource-link no-mobile-link">
                 <% if article.tags.length > 2 %>
                     <%= render partial: "articles/tag", collection: article.tags.first(2), :locals => { article: article } %>
                     and <%= article.tags.length - 2 %> more.

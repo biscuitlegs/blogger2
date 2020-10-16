@@ -12,12 +12,12 @@
         <%= comment.body %>
     </div>
     
-    <div class="author">
-        Posted By: 
+    <div class="info">
+        Posted By:
         <% if logged_in? && Author.find(comment.author_id).id == current_user.id %>
-            <%= link_to "Me", current_user%>
+            <%= link_to "Me", current_user %>
         <% else %>
-            <%= link_to Author.find(comment.author_id).username, Author.find(comment.author_id)%>
+            <%= link_to Author.find(comment.author_id).username, Author.find(comment.author_id) %>
         <% end %>
         <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago.
     </div>

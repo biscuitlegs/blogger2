@@ -5,16 +5,16 @@
 </div>
 
 <% if logged_in? && current_user.id == @author.id %>
+  <div class="delete-resource-link">
+    <a href="<%= @author %>" data-method="delete" data-confirm="Really delete your Author?">
+        <%= inline_svg_tag "trash_large" %>
+    </a>
+  </div>
   <div class="edit-resource-link">
     <a href="<%= edit_author_path %>">
         <%= inline_svg_tag "edit" %>
     </a>
   </div>
-  <div class="delete-resource-link">
-        <a href="<%= @author %>" data-method="delete" data-confirm="Really delete your Author?">
-            <%= inline_svg_tag "trash_large" %>
-        </a>
-    </div>
 <% end %>
 
 <div class="author">
@@ -54,8 +54,8 @@
     <tbody>
         <% @author.articles.each do |article| %>
         <tr>
-            <td class="table-link"><%= link_to article.title, article %></td>
-            <td class="article-tags">
+            <td class="small-resource-link"><%= link_to article.title, article %></td>
+            <td class="small-resource-link no-mobile-link">
                 <% if article.tags.length > 2 %>
                     <%= render partial: "articles/tag", collection: article.tags.first(2), :locals => { article: article } %>
                     and <%= article.tags.length - 2 %> more.
