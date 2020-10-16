@@ -180,7 +180,7 @@ body {
     text-align: center;
     color:#3D405B;
     display: inline-block;
-    margin: 10px auto 5px auto;
+    margin: 50px auto 5px auto;
     width: 100%;
 }
 
@@ -216,7 +216,7 @@ body {
     font-size: 1.7em;
     text-align: center;
     color: #3d405b;
-    padding: 0.1em 0.2em;
+    padding: 0.3em 0.5em;
 }
 
 .small-resource-link a {
