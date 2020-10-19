@@ -63,10 +63,15 @@
       </nav>
 
     </header>
-    <% if flash[:success] || flash[:error] %>
-      <p class="flash">
-      <%= flash[:success] %>
-      <%= flash[:error] %>
+    <% if flash[:success] %>
+      <p class="flash flash-success">
+        <%= flash[:success] %>
+      </p>
+    <% end %>
+
+    <% if flash[:error] %>
+      <p class="flash flash-error">
+        <%= flash[:error] %>
       </p>
     <% end %>
 

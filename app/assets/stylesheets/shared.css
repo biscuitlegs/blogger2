@@ -13,13 +13,23 @@ body {
     margin: 10px auto 10px auto;
     width: 70%;
     height: 80px;
-    background-color: #81B29A;
     opacity: 70%;
-    border: 2px solid #577265;
     border-radius: 10px;
     text-align: center;
     padding: 15px 0 0 0;
     font-size: 1.5em;
+}
+
+.flash-success {
+    color: #224736;
+    background-color: #81B29A;
+    border: 2px solid #577265;
+}
+
+.flash-error {
+    color: #35150c;
+    background-color: #ff8d6d;
+    border: 2px solid #E07A5F;
 }
 
 .article-image img{
