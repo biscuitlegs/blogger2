@@ -1,31 +1,39 @@
 <%= form_with(model: author, local: true) do |form| %>
-  <% if author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
-
-      <ul>
-      <% author.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="form-field">
     <%= form.text_field :username, placeholder: "Username..." %>
   </div>
+  <ul class="errors-container">
+    <% author.errors[:username].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
 
   <div class="form-field">
     <%= form.text_field :email, placeholder: "Email..." %>
   </div>
+  <ul class="errors-container">
+    <% author.errors[:email].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
 
   <div class="form-field">
     <%= form.password_field :password, placeholder: "Password..." %>
   </div>
+  <ul class="errors-container">
+    <% author.errors[:password].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
 
   <div class="form-field">
     <%= form.password_field :password_confirmation, placeholder: "Confirm Password..." %>
   </div>
+  <ul class="errors-container">
+    <% author.errors[:password_confirmation].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
 
   <div class="submit-button">
     <% if params[:action] == "edit" %>

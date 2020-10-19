@@ -29,16 +29,13 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
 
-    respond_to do |format|
-      if @author.save
-        auto_login(@author)
-        format.html { redirect_to @author }
-        flash[:success] = "Author #{@author.username} successfully created."
-        format.json { render :show, status: :created, location: @author }
-      else
-        format.html { render :new }
-        format.json { render json: @author.errors, status: :unprocessable_entity }
-      end
+    if @author.save
+      flash[:success] = "Author #{@author.username} successfully created."
+      auto_login(@author)
+      redirect_to @author
+    else
+      flash[:error] = "Error: Author not created. Please fix any mistakes and try again."
+      render :new
     end
   end
 

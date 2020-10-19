@@ -1,12 +1,12 @@
 <%= form_for(@article, html: {multipart: true}) do |f| %>
-  <ul>
-  <% @article.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-  </ul>
     <div class="form-field">
         <%= f.text_field :title, :placeholder => "Title..." %>
     </div>
+    <ul class="errors-container">
+        <% @article.errors[:title].each do |error| %>
+            <li><%= error.capitalize %></li>
+        <% end %>
+    </ul>
     <div class="form-field">
         <%= f.text_area :body, :placeholder => "Content..." %>
     </div>

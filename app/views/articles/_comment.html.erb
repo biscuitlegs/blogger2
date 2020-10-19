@@ -1,8 +1,8 @@
-<div class="comment">
 
+<div class="comment">
     <% if logged_in? && comment.author_id == current_user.id %>
         <div class="delete-resource-link">
-            <a href="<%= article_comment_path(comment.id) %>" data-method="delete" data-confirm="Really delete this Comment?">
+            <a href="<%= article_comment_path(comment.id, comment.article_id) %>" data-method="delete" data-confirm="Really delete this Comment?">
                 <%= inline_svg_tag "trash_small.svg" %>
             </a>
         </div>

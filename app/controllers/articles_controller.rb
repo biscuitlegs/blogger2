@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
             flash[:success] = "Article '#{@article.title}' successfully created."
             redirect_to @article
         else
-            flash.now[:error] = "Error: Article not created."
+            flash.now[:error] = "Error: Article not created. Please fix any mistakes and try again."
             render(:new)
         end
     end

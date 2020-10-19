@@ -23,11 +23,15 @@ class CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
         @comment.article_id = params[:article_id]
         @comment.author_id = current_user.id
-        flash[:success] = "Comment successfully posted."
-      
-        @comment.save
-      
-        redirect_to article_path(@comment.article)
+        @article = Article.find(@comment.article_id)
+
+        if @comment.save
+            flash[:success] = "Comment successfully posted."
+            redirect_to article_path(@comment.article)
+        else
+            flash.now[:error] = "Error: Comment not posted. Please fix any mistakes and try again."
+            render "articles/show"
+        end
     end
 
     def destroy

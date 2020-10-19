@@ -5,8 +5,14 @@
 <%= form_for [ @article, @comment ] do |f| %>
   
   <div class="form-field">
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :placeholder => "Comment..." %>
   </div>
+
+  <ul class="errors-container">
+    <% @comment.errors[:body].each do |error| %>
+        <li><%= error.capitalize %></li>
+    <% end %>
+  </ul>
 
   <div class="submit-button">
     <%= f.submit 'Post Comment' %>
